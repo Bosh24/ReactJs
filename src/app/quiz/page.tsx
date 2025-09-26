@@ -60,7 +60,7 @@ export default function QuizPage() {
         <div style={{ maxWidth: 800, margin: "0 auto", padding: 16 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
                 <h1>Quiz</h1>
-                <Link href="/leaderboard">Leaderboard</Link>
+                <Link href="/leaderboard" className="btn btn-secondary">Leaderboard</Link>
             </div>
 
             {!finished && (
@@ -90,8 +90,8 @@ export default function QuizPage() {
                         })}
                     </div>
                     <div style={{ display: "flex", gap: 8, marginTop: 16 }}>
-                        <button onClick={prevQuestion} disabled={currentIndex === 0}>Prev</button>
-                        <button onClick={nextQuestion}>{currentIndex === questions.length - 1 ? "Finish" : "Next"}</button>
+                        <button onClick={prevQuestion} disabled={currentIndex === 0} className="btn btn-secondary">Prev</button>
+                        <button onClick={nextQuestion} className="btn btn-primary">{currentIndex === questions.length - 1 ? "Finish" : "Next"}</button>
                     </div>
                 </div>
             )}
@@ -106,8 +106,8 @@ export default function QuizPage() {
                             placeholder="Your name"
                             style={{ padding: 8, border: "1px solid #ccc", borderRadius: 6 }}
                         />
-                        <button onClick={submitScore}>Save to Leaderboard</button>
-                        <Link href="/leaderboard" style={{ marginLeft: 8 }}>View Leaderboard</Link>
+                        <button onClick={submitScore} className="btn btn-primary">Save to Leaderboard</button>
+                        <Link href="/leaderboard" style={{ marginLeft: 8 }} className="btn btn-secondary">View Leaderboard</Link>
                     </div>
                     <div style={{ marginTop: 16 }}>
                         <Link href="/">Back Home</Link>

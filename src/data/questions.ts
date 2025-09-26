@@ -9,7 +9,7 @@ export type Question = {
     answers: AnswerOption[]; // exactly 4 options, one correct
 };
 
-// At least 25 questions so we can randomly pick 20 each run
+// ใช้ ai gen คำถาม 25 ข้อ เพราะเร็วครับ 
 export const ALL_QUESTIONS: Question[] = [
     {
         id: "q1",

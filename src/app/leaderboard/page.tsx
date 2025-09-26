@@ -15,7 +15,7 @@ export default function LeaderboardPage() {
         <div style={{ maxWidth: 800, margin: "0 auto", padding: 16 }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 }}>
                 <h1>Leaderboard</h1>
-                <Link href="/quiz">Take Quiz</Link>
+                <Link href="/quiz" className="btn btn-primary">Take Quiz</Link>
             </div>
             {entries.length === 0 ? (
                 <div>No scores yet. Be the first!</div>
@@ -42,7 +42,7 @@ export default function LeaderboardPage() {
                 </table>
             )}
             <div style={{ marginTop: 16 }}>
-                <Link href="/">Back Home</Link>
+                <Link href="/" className="btn btn-secondary">Back Home</Link>
             </div>
         </div>
     );
